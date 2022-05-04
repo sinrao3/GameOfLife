@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gameoflife_test.CellTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-05-02T06:00:39" hostname="Sindhooras-MacBook-Pro.local" time="0.026">
+  <properties/>
+  <testcase name="shouldGetNextGenerationForBlockPattern()" classname="gameoflife_test.CellTest" time="0.021"/>
+  <testcase name="shouldGetNextGenerationForOscillatorPattern()" classname="gameoflife_test.CellTest" time="0.0"/>
+  <testcase name="shouldGetNextGenerationForToadPattern()" classname="gameoflife_test.CellTest" time="0.001"/>
+  <testcase name="shouldGetNextGenerationForBoatPattern()" classname="gameoflife_test.CellTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
