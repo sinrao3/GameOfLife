@@ -13,7 +13,7 @@ public class GridTest {
         Grid grid= new Grid();
         grid.addNewCellToGrid(new Cell(0,0));
 
-        List<Cell> neighbors= grid.getNeighbors(new Cell(0,0));
+        List<Cell> neighbors= grid.getAliveNeighbors(new Cell(0,0));
 
         assertEquals(0,neighbors.size());
     }
@@ -23,13 +23,24 @@ public class GridTest {
         grid.addNewCellToGrid(new Cell(0,0));
         grid.addNewCellToGrid(new Cell(0,1));
 
-        List<Cell> neighborsOfFirstCell= grid.getNeighbors(new Cell(0,0));
-        List<Cell> neighborsOfSecondCell= grid.getNeighbors(new Cell(0,1));
+        List<Cell> neighborsOfFirstCell= grid.getAliveNeighbors(new Cell(0,0));
+        List<Cell> neighborsOfSecondCell= grid.getAliveNeighbors(new Cell(0,1));
 
         assertArrayEquals(new Cell[]{new Cell(0,1)}, neighborsOfFirstCell.toArray());
         assertArrayEquals(new Cell[]{new Cell(0,0)}, neighborsOfSecondCell.toArray());
 
     }
 
+    @Test
+    void twoCellsFarFromEachOtherShouldHaveZeroNeighbors(){
+        Grid grid= new Grid();
+        grid.addNewCellToGrid(new Cell(0,0));
+        grid.addNewCellToGrid(new Cell(3,3));
 
+        List<Cell> neighborsOfFirstCell= grid.getAliveNeighbors(new Cell(0,0));
+        List<Cell> neighborsOfSecondCell= grid.getAliveNeighbors(new Cell(3,3));
+
+        assertEquals(0, neighborsOfFirstCell.size());
+        assertEquals(0, neighborsOfSecondCell.size());
+    }
 }

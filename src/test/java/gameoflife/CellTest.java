@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CellTest {
     @Test
     void shouldBeAbleToInitialiseLiveCell(){
-        Cell cell= new Cell(0,0);
+        Cell cell= new Cell(0,0,true);
         assertTrue(cell.isAlive());
     }
 
@@ -20,14 +20,14 @@ public class CellTest {
 
     @Test
     void shouldBeAbleToKillAnAliveCell(){
-        Cell cell= new Cell(0,0);
+        Cell cell= new Cell(0,0,true);
         assertTrue(cell.isAlive());
         cell.kill();
         assertFalse(cell.isAlive());
     }
 
     @Test
-    void shouldBeAbleToResurrectAnAliveCell(){
+    void shouldBeAbleToResurrectADeadCell(){
         Cell cell= new Cell(0,0, false);
         assertFalse(cell.isAlive());
         cell.resurrect();
