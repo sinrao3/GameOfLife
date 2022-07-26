@@ -7,16 +7,16 @@ public class Cell {
     private boolean isAlive;
 
     public Cell(int x, int y, boolean isAlive) {
-        this.isAlive= isAlive;
-        this.position=new CellPosition(x,y);
+        this.isAlive = isAlive;
+        this.position = new CellPosition(x, y);
     }
 
     public Cell(int x, int y) {
-        this(x,y,false);
+        this(x, y, false);
     }
 
     public void setState(boolean isAlive) {
-        this.isAlive=isAlive;
+        this.isAlive = isAlive;
     }
 
     public boolean isAlive() {
@@ -24,11 +24,11 @@ public class Cell {
     }
 
     public void kill() {
-        this.isAlive=false;
+        this.isAlive = false;
     }
 
     public void resurrect() {
-        this.isAlive=true;
+        this.isAlive = true;
     }
 
     @Override
